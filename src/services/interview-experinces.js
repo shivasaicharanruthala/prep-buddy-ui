@@ -4,7 +4,7 @@ const headers = {
     "Content-Type": "application/json"
 };
 
-const BASE_URL = 'http://localhost:8080'
+const BASE_URL = 'https://prep-buddy-backend.herokuapp.com/'
 
 
 export const createInterviewExperience = async (userId, payload) => {

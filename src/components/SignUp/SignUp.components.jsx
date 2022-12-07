@@ -53,7 +53,7 @@ function SignUp(props) {
         if (firstName && lastName && email && password) {
             axios({
                 // Endpoint to send files
-                url: "http://localhost:8080/user/signup",
+                url: "https://prep-buddy-backend.herokuapp.com/user/signup",
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

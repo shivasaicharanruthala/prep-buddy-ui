@@ -54,7 +54,7 @@ function Login(props) {
         if (email && password) {
             axios({
                 // Endpoint to send files
-                url: "http://localhost:8080/user/login",
+                url: "https://prep-buddy-backend.herokuapp.com/user/login",
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

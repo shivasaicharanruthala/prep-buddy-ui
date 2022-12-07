@@ -139,7 +139,7 @@ export default function EnhancedTableHead(props) {
   const [listings, setListings] = useState([])
   const [companyFilter, setCompanyFilter] = useState("")
   const [typeFilter, setTypeFilter] = useState("")
-  const baseUri = `http://localhost:8080/job-listings`
+  const baseUri = `https://prep-buddy-backend.herokuapp.com/job-listings`
   const fetchTableDetails = async () => {
     
     const response = await fetch(baseUri);
