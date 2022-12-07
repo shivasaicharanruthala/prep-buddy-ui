@@ -1,0 +1,31 @@
+// Styles for elements in tab panels
+.mock-interview-tab-panel {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+
+// Styles for elements in my interview tabs
+.my-interviews-tab {
+  cursor: pointer;
+  color: white;
+  background-color: blue;
+  width: 582px;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  border: 2px solid blue;
+}
+
+// Styles for elements in other interview tabs
+.other-interviews-tab {
+  cursor: pointer;
+  color: black;
+  width: 582px;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  left: -40px;
+  border: 2px solid blue;
+}

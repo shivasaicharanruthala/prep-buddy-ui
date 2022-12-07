@@ -1,0 +1,20 @@
+// Styles to interview request form container.
+.request-interview-form-container {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  width: 800px;
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+}
+
+// Styles to interview request form.
+.request-interview-form-actions {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+// Styles fro request interview & cancel buttons
+.request-interview-cancel-btn, .request-interview-request-btn {
+  margin: 10px;
+}

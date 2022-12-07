@@ -1,0 +1,41 @@
+.loginCard {
+    //sx={{ marginLeft: 10, width: 500, marginRight: 10, marginTop: 18, boxShadow: 4, borderRadius: 4, height: 490, borderTopWidth: 5 }} 
+    margin-left: 90px;
+    margin-right: 70px;
+    margin-top: 140px;
+    height: 490px;
+}
+
+.boxMain {
+    // sx={{
+    //     marginTop: 4,
+    //     display: 'flex',
+    //     flexDirection: 'column',
+    //     alignItems: 'center',
+    // }}
+    margin-top: 28px;
+    margin-left: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.signInDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+.gridSignUp {
+    display: flex;
+    margin-top: 15px;
+    margin-left: 115px;
+}
+
+.signInTypography {
+    //style={{ marginTop: '12px' }}
+    margin-top: 12px;
+}
+
+.logo {
+    height: 100px;
+}

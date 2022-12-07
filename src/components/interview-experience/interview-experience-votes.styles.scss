@@ -1,0 +1,18 @@
+.upvote-btn {
+    &:hover {
+        cursor: pointer;
+        color:green;
+    }
+}
+
+.count {
+    margin-left: 12px;
+}
+
+.downvote-btn {
+    &:hover {
+        cursor: pointer;
+        color:red;
+    }
+}
+
