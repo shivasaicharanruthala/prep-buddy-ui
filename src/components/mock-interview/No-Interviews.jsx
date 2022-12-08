@@ -1,9 +1,10 @@
-import CardContent from "@mui/material/CardContent";
-import Typography from "@mui/material/Typography";
-import Card from "@mui/material/Card";
 import * as React from "react";
 
+// imports Styled
+import {CardContent, Typography, Card} from "@mui/material";
 
+
+// NoInterviews Component as a common component to when no interviews available.
 export const NoInterviews = () => {
     return (
         <Card variant="outlined" sx={{boxShadow: 4, borderRadius: 3, width: 1100 }}>

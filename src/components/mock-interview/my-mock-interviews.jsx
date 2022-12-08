@@ -2,9 +2,11 @@ import * as React from "react";
 import {useContext, useEffect} from "react";
 
 import {UserContext} from "../../Context/user.context";
+
+// imports dependent components to be rendered.
+import {NoInterviews} from "./No-Interviews";
 import MockInterviewCard from "./mock-interview-card.component";
 import {getAllMyMockInterviews} from "../../services/mock-interview";
-import {NoInterviews} from "./No-Interviews";
 
 
 // MyMockInterviews Component to iterate over each interview and pass those details to MockInterviewCard component.

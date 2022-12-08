@@ -6,14 +6,11 @@ import {useContext, useState} from "react";
 import {UserContext} from "../../Context/user.context";
 import {postFeedback} from "../../services/mock-interview";
 
-// import styled components from Material UI.
-import Grid from "@mui/material/Grid";
-import Paper from "@mui/material/Paper";
-import Avatar from "@mui/material/Avatar";
-import TextField from "@mui/material/TextField";
+// import styled components & icons from Material UI.
 import {deepOrange} from "@mui/material/colors";
 import IconButton from '@mui/material/IconButton';
 import Typography from "@mui/material/Typography";
+import {Grid, Paper, Avatar, TextField} from "@mui/material";
 import ModeEditOutlineIcon from "@mui/icons-material/ModeEditOutline";
 import ArrowRightAltOutlinedIcon from '@mui/icons-material/ArrowRightAltOutlined';
 

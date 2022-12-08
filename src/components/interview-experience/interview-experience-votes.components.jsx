@@ -1,14 +1,17 @@
 import * as React from "react";
-import { useEffect } from "react";
 import { useContext } from "react";
 
-import './interview-experience-votes.styles.scss';
+// import styled components & Icons from Material UI.
 import {UserContext} from "../../Context/user.context";
 import { modifiyUpvotes } from "../../services/interview-experinces";
+
+// import styled components & Icons from Material UI.
+import { Typography } from "@mui/material";
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import { Typography } from "@mui/material";
 import { CustomAlert } from '../Alerts/alert';
+
+import './interview-experience-votes.styles.scss';
 
 const Votes = ({experienceId, upvotes}) => {
     const {userData} = useContext(UserContext)
@@ -34,11 +37,12 @@ const Votes = ({experienceId, upvotes}) => {
                 setAlertMessage("Couldn't modify upvotes")
         })
     }
+    // style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', marginTop: '70px'}}
 
     return (
-        <div class="upvotes" style={{display: 'flex', flexDirection: 'column', justifyContent: 'center', marginTop: '70px'}}>
+        <div className="upvotes" >
             <CustomAlert isAlertSet={isAlertSet} severity="error" message={alertMessage} />
-            <div class="up-vote" onClick={() => handleUpvotesChange(true)}>
+            <div className="up-vote" onClick={() => handleUpvotesChange(true)}>
                 <ExpandLessIcon fontSize="large" className="upvote-btn"/>
             </div>
 
@@ -46,7 +50,7 @@ const Votes = ({experienceId, upvotes}) => {
                 <Typography variant="h6" sx={{color: 'black'}}>{count}</Typography>
             </div>
 
-            <div class="down-vote" onClick={() =>  handleUpvotesChange(false)}>
+            <div className="down-vote" onClick={() =>  handleUpvotesChange(false)}>
                 <ExpandMoreIcon className="downvote-btn" fontSize="large" />
             </div>
         </div>

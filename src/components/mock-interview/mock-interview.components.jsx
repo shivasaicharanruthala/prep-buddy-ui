@@ -10,12 +10,10 @@ import OtherMockInterviews from "./other-mock-interviews";
 import InterviewRequestForm from "./mock-interview-form-modal.component";
 
 // imports styled components from Material UI.
-import Box from '@mui/material/Box';
-import Tab from '@mui/material/Tab';
-import {Button} from "@mui/material";
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import TabContext from '@mui/lab/TabContext';
+import {Box, Tab, Button } from '@mui/material';
 import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
 
 // imports styles for this component.
@@ -44,6 +42,7 @@ const MockInterview = () => {
                 <Button
                     color="primary"
                     variant="contained"
+                    sx={{backgroundColor: 'rgba(229,79,24,0.92)'}}
                     endIcon={<AddOutlinedIcon  fontSize="small" />}
                     onClick={handleModal}
                 >Request Interview</Button>

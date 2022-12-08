@@ -4,7 +4,7 @@ const headers = {
     "Content-Type": "application/json"
 };
 
-const BASE_URL = 'https://prep-buddy-backend.herokuapp.com/'
+const BASE_URL = 'https://prep-buddy-backend.herokuapp.com'
 
 
 // getUserEvents function to fetch all user events through API and sets the response in component state.

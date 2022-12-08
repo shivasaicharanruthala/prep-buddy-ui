@@ -1,13 +1,12 @@
 import * as React from "react";
 import {useContext, useEffect, useState} from "react";
 
-import Card from '@mui/material/Card';
 import {UserContext} from "../../Context/user.context";
+
+// imports dependent components to be rendered.
+import {NoInterviews} from "./No-Interviews";
 import MockInterviewCard from "./mock-interview-card.component";
 import { getInterviewsTaken} from "../../services/mock-interview";
-import Typography from "@mui/material/Typography";
-import CardContent from "@mui/material/CardContent";
-import {NoInterviews} from "./No-Interviews";
 
 
 // OtherMockInterviews Component renders the interviews to take or accept and pass to MockInterviewCard.

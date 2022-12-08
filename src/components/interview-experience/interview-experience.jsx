@@ -1,10 +1,12 @@
 import { useState, useContext, useEffect } from "react";
+import {UserContext} from "../../Context/user.context";
 
+// imports dependent components.
 import InterviewExperienceCard from "./interview-experience-card.components";
 import { getAllInterviewExperience } from "../../services/interview-experinces.js";
 import InterviewExperienceModal from './interview-experience-model.components';
 
-import {UserContext} from "../../Context/user.context";
+// imports styled Material components.
 import Button from '@mui/material/Button';
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 
@@ -42,7 +44,7 @@ const InterviewExperience = () => {
     return (
         <div>
             <InterviewExperienceModal isModalOpen={isModalOpen} handleModal={handleModal} experiencesLength={experiencesLength} setExperiencesLength={setExperiencesLength} />
-            <div className="add-experience-btn" style={{marginLeft:'950px'}}>
+            <div className="add-experience-btn">
                 <Button
                     color="primary"
                     variant="contained"

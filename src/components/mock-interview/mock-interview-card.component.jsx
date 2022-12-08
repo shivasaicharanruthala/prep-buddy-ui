@@ -12,12 +12,6 @@ import InterviewRequestForm from "./mock-interview-form-modal.component";
 import { acceptMockInterviewRequest, deleteInterview } from "../../services/mock-interview";
 
 // import styled components from Material UI.
-import Card from '@mui/material/Card';
-import Chip from '@mui/material/Chip';
-import Stack from '@mui/material/Stack';
-import Avatar from '@mui/material/Avatar';
-import { Button, Link } from "@mui/material";
-import Typography from '@mui/material/Typography';
 import DeleteIcon from '@mui/icons-material/Delete';
 import CardContent from '@mui/material/CardContent';
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
@@ -25,13 +19,13 @@ import ModeEditOutlineIcon from '@mui/icons-material/ModeEditOutline';
 import AttachFileOutlinedIcon from '@mui/icons-material/AttachFileOutlined';
 import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
 import ExpandLessOutlinedIcon from '@mui/icons-material/ExpandLessOutlined';
+import {Card, Chip, Stack, Avatar, Button, Link, Typography, Tooltip} from '@mui/material';
 
 // import colors from Material UI.
 import {deepOrange, deepPurple, pink, red} from '@mui/material/colors';
 
 // imports styles for this component.
 import './mock-interview-card.styles.scss';
-import Tooltip from "@mui/material/Tooltip";
 
 // StatusChip Component to show the status in colored chips according to status.
 const StatusChip = ({status}) => {

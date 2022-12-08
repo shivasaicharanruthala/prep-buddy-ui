@@ -1,21 +1,19 @@
 import * as React from 'react';
-import { useContext, useEffect, useState } from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { useContext, useEffect, useState } from "react";
+
+import { UserContext } from "../../Context/user.context";
+
+// imports component to be rendered.
+import PermanentDrawerLeft from "../side-navabar/side-navbar.component";
+
+// imports styled components & Icons from Material UI.
+import Diversity3Icon from '@mui/icons-material/Diversity3';
+import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
+import {AppBar, Box, IconButton, Avatar, Toolbar, Typography, Button } from '@mui/material';
 
 import './navbar.styles.scss';
-
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import IconButton from '@mui/material/IconButton';
-import Avatar from '@mui/material/Avatar';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
-
-import PermanentDrawerLeft from "../side-navabar/side-navbar.component";
-import { UserContext } from "../../Context/user.context";
 
 
 
@@ -35,14 +33,18 @@ function NavBar(props) {
     }
     return (
         <Box sx={{ display: 'flex'}}>
-            <AppBar component="nav">
+            {/*208094,   'rgba(78,32,148,0.88)' */}
+            <AppBar component="nav" sx={{backgroundColor: 'rgba(31,68,241,0.94)'}}>
                 <Toolbar>
                     <Typography
                         variant="h5"
                         component="div"
                         sx={{ flexGrow: 1 }}
                     >
-                        <b>PrepBuddy</b>
+                       <div style={{display: 'flex', flexDirection: 'row'}}>
+                           <Diversity3Icon sx={{marginRight: 1, marginTop: '2px'}}/>
+                           <Typography variant="h6" style={{color:'white'}}>PrepBuddy</Typography>
+                       </div>
                     </Typography>
                     <Box sx={{ display: 'flex' }}>
                         {
@@ -59,7 +61,7 @@ function NavBar(props) {
                                 </>
                             ) : (
                                 <>
-                                    <Button sx={{ color: '#fff' }} href="/login">
+                                    <Button sx={{ color: 'white' }} href="/login">
                                         Login
                                     </Button>
 

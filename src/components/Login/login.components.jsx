@@ -1,13 +1,16 @@
-import React, { useState } from "react";
-import { useContext } from "react";
+import axios from 'axios';
+import React, { useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { TextField, Button, Box, Grid, Link, Typography, Container, Card } from "@mui/material";
+// imports dependent components to be rendered.
 import isEmail from 'validator/lib/isEmail';
-import axios from 'axios';
 import BasicAlerts from '../Alerts/alert';
-
 import { UserContext } from "../../Context/user.context";
+
+
+// imports Styled components from Material UI.
+import { TextField, Button, Box, Grid, Link, Typography, Container, Card } from "@mui/material";
+
 import logo from './../Login/Icon.png';
 
 import './login.styles.scss';
@@ -102,7 +105,7 @@ function Login(props) {
                                 {/* PrepBuddy Logo */}
                                 <img src={logo} alt="logo" className="logo" />
                                 <div className="signInDiv">
-                                    <Typography component="h1" variant="h5" className="signInTypography">
+                                    <Typography color="blueviolet" component="h1" variant="h5" className="signInTypography">
                                         Sign in
                                     </Typography>
                                 </div>
@@ -117,7 +120,7 @@ function Login(props) {
 
                                     <TextField margin="normal" required fullWidth id="password" label="Password" type="password" name="password" autoComplete="Password" autoFocus onChange={(e) => passwordChange(e)} />
 
-                                    <Button type="submit" fullWidth variant="contained" sx={{ marginTop: 2 }}>Sign In</Button>
+                                    <Button style={{backgroundColor:'royalblue'}} type="submit" fullWidth variant="contained" sx={{ marginTop: 2 }}>Sign In</Button>
 
                                     <Grid container className="gridSignUp">
                                         <Grid item>

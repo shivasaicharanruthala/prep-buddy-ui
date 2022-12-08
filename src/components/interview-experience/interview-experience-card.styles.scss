@@ -1,19 +1,38 @@
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic);
 
-.cardcontent {
-    display: 'flex';
-    flex-direction: 'row'
+.card-title {
+    display: flex;
+    flex-direction: row;
+    background-color: #f8f9fa;
+}
+
+.card-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.chip {
+    margin-left: 50px;
+    //margin-top: 16
 }
 
 .cardIcons {
-    margin-left: '420px';
-    margin-top: '2px'
+    margin-left: 625px;
+    margin-top: 2px;  
 }
 
-
+.edit-delete-icons {
+    margin-top: 15;
+}
 
 .cardRow {
-    height: '250px';
-    display: 'flex'; 
-    flex-direction: 'row'
+    height: 250px;
+    display: flex; 
+    flex-direction: row;
+    background-color: #F7FBFF;
+}
+
+.experience {
+    margin-left: 20px;
+    overflow-y: auto;
 }

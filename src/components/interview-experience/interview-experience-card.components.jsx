@@ -23,6 +23,10 @@ import { CustomAlert } from '../Alerts/alert';
 import Chip from '@mui/material/Chip';
 import Avatar from '@mui/material/Avatar';
 
+import microsoftLogo from './microsoft.png';
+import googleLogo from './google.png';
+import amazonLogo from './amazon.jpeg'
+
 
 
 const ExpandMore = styled((props) => {
@@ -75,26 +79,19 @@ export default function InterviewExperienceCard({ experience, experiencesLength,
       <Card sx={{ width: "1135px", marginTop: '10px', marginBottom: '30px', boxShadow: 4, borderRadius: 3 }}>
         <Divider />
         <CardContent>
-          <div className="cardcontent" style={{ display: 'flex', flexDirection: 'row' }}>
+          <div className="card-title">
             <CustomAlert isAlertSet={isAlertSet} severity="error" message={alertMessage} />
-            <div style={{ display: 'flex', flexDirection: 'row' }}>
+            <div className="card-header">
               <div>
                 <Typography gutterBottom variant="h5" component="div" align="left" style={{ marginLeft: '2px', width: '400px', marginBottom: 1, maxWidth: '800px' }}>
                   {experience.title}
                 </Typography>
               </div>
-              <div style={{ marginLeft: '200px', marginTop: 16 }}>
-                <Chip
-                  avatar={<Avatar alt="Natacha" src="/static/images/avatar/1.jpg" />}
-                  label={experience.company}
-                  color='success'
-                  size="small" />
-              </div>
             </div>
-            <div className="cardIcons" style={{ marginLeft: '350px', marginTop: '2px' }}>
+            <div className="cardIcons">
               {
                 experience.userId === userId ? (
-                  <div style={{ marginTop: 15 }} >
+                  <div className="edit-delete-icons">
                     <ModeEditOutlineIcon className="edit-btn" fontSize="medium" color="primary" sx={{ cursor: 'pointer' }} onClick={handleModalOpen} />
                     <DeleteIcon className="delete-btn" fontSize="medium" sx={{ color: red[500], marginLeft: '10px', cursor: 'pointer' }} onClick={() => handleInterviewExperienceDelete(experience.id)} />
                   </div>
@@ -104,16 +101,16 @@ export default function InterviewExperienceCard({ experience, experiencesLength,
               <InterviewExperienceModal isModalOpen={isModalOpen} handleModal={handleModalOpen} experince={experience} handleExpericesEdit={handleExpericesEdit} />
             </div>
           </div>
-          <Typography gutterBottom variant="caption" component="div" align="left" style={{ marginLeft: '2px', marginTop: 0, marginBottom: 10 }}>
+          <Typography gutterBottom variant="caption" component="div" align="left" style={{ marginLeft: '2px', marginTop: 0, marginBottom: 10,backgroundColor:"#f8f9fa" }}>
             <b>User: </b>{experience.name} &emsp; <b>Interviewed On: </b>{moment(experience.interviewedDate, 'YYYY-MM-DDTHH:mm').format('Do MMMM YYYY')}
           </Typography>
           <Divider />
 
-          <div class="cardRow" style={{ height: '250px', display: 'flex', flexDirection: 'row' }}>
-            <div class="column votes" style={{}}>
+          <div class="cardRow">
+            <div class="votes">
               <Votes experienceId={experience.id} upvotes={experience.upvotes} />
             </div>
-            <div style={{ marginLeft: '20px' }} class="column experience">
+            <div class="experience">
               <dl>
                 <dt align='left' marginLeft='2px'><b>Application Process</b></dt>
                 <dd align='left' marginLeft='2px' >{experience.applicationProcess}</dd>
@@ -125,10 +122,17 @@ export default function InterviewExperienceCard({ experience, experiencesLength,
             </div>
           </div>
         </CardContent>
-        <CardActions disableSpacing>
-          <div className='tags-container' style={{ marginLeft: 50 }}>
+        <CardActions disableSpacing sx={{backgroundColor:"#f8f9fa"}}>
+          <div className="chip">
+            <Chip
+              avatar={<Avatar alt="Natacha" src={experience.company === 'Microsoft' ? microsoftLogo : (experience.company === 'Google' ? googleLogo : amazonLogo)}/>}
+              label={experience.company}
+              color='warning'
+              size="medium" sx={{backgroundColor:'rgb(21, 159, 187)'}}/>
+          </div>
+          <div className='tags-container'>
             {
-              experience.tags?.split(',')?.map(tag => <Chip label={tag} color='warning' size="small" sx={{ margin: 1 }} /> )
+              experience.tags.split(',').map(tag => <Chip label={tag} color='warning' size="medium" sx={{ margin: 1 , backgroundColor: 'rgb(209, 109, 21)'}} />)
             }
           </div>
           <ExpandMore

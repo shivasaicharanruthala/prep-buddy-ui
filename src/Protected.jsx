@@ -2,6 +2,7 @@ import {useContext, useEffect} from "react"
 import { useNavigate } from "react-router-dom";
 import {UserContext} from "./Context/user.context";
 
+// Protected Components is to redirect not authorized to login page.
 const Protected = ({children}) => {
     const { userData } = useContext(UserContext)
     const navigate = useNavigate();

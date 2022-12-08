@@ -1,10 +1,13 @@
-import React, { useState, ChangeEvent } from "react";
+import axios from 'axios';
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-import { TextField, Button, Box, Grid, Link, Typography, Container, Card } from "@mui/material";
-import isEmail from 'validator/lib/isEmail';
-import axios from 'axios';
+// imports depended components to be rendered.
 import BasicAlerts from '../Alerts/alert';
+import isEmail from 'validator/lib/isEmail';
+
+// imports styled components from Material UI.
+import { TextField, Button, Box, Grid, Link, Typography, Container, Card } from "@mui/material";
 
 import './SignUp.styles.scss';
 
@@ -109,7 +112,7 @@ function SignUp(props) {
 
                         <TextField margin="normal" required fullWidth id="password" label="Password" type="password" name="password" autoComplete="Password" autoFocus onChange={(e) => passwordChange(e)} />
 
-                        <Button type="submit" fullWidth variant="contained" className="signUpBtn" sx={{ backgroundColor: 'rgb(21, 196, 38)', marginTop: 2 }}>Sign Up</Button>
+                        <Button type="submit" fullWidth variant="contained" className="signUpBtn" sx={{ marginTop: 2 }}>Sign Up</Button>
 
                         <Grid container className="gridLogin">
 

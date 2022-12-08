@@ -1,6 +1,6 @@
 import * as React from 'react';
-import Alert from '@mui/material/Alert';
-import Stack from '@mui/material/Stack';
+
+import {Alert, Stack} from '@mui/material';
 
 export default function BasicAlerts(props) {
   return (

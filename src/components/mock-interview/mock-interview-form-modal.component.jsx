@@ -9,14 +9,9 @@ import DatetimePicker from "./date-picker";
 import {modifyInterview, requestInterview} from "../../services/mock-interview";
 
 // imports styled components from Material UI
-import Box from '@mui/material/Box';
-import Modal from '@mui/material/Modal';
-import Button from '@mui/material/Button';
-import Divider from "@mui/material/Divider";
-import TextField from "@mui/material/TextField";
-import Typography from '@mui/material/Typography';
 import ClearOutlinedIcon from '@mui/icons-material/ClearOutlined';
 import ChevronRightOutlinedIcon from '@mui/icons-material/ChevronRightOutlined';
+import {Box, Modal, Button, Divider, TextField, Typography} from '@mui/material';
 
 // imports styles to apply on this component
 import './mock-interview-form-modal.styles.scss';

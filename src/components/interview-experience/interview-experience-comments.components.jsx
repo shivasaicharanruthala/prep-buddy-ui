@@ -1,5 +1,6 @@
 import * as React from "react";
 import { useState } from "react";
+import moment from "moment";
 
 // import styled components from Material UI.
 import Typography from "@mui/material/Typography";
@@ -11,6 +12,7 @@ import { Button } from "@mui/material";
 import DeleteIcon from '@mui/icons-material/Delete';
 import { red } from '@mui/material/colors';
 import { UserContext } from "../../Context/user.context";
+
 
 //import icons from Material UI.
 import ModeEditOutlineIcon from "@mui/icons-material/ModeEditOutline";
@@ -95,6 +97,7 @@ const InterviewExperienceComments = ({ experinceId }) => {
                 <form onSubmit={handleFormSubmit}>
                     <TextField
                         id="filled-textarea"
+                        className="comment-textbox"
                         rows={1}
                         placeholder="write your comment..."
                         onChange={(e) => {
@@ -124,8 +127,8 @@ const InterviewExperienceComments = ({ experinceId }) => {
                                     <Avatar alt="Remy Sharp" src="https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" />
                                 </Grid>
                                 <Grid justifyContent="left" item xs zeroMinWidth>
-                                    <div style={{ display: 'flex', flexDirection: 'row' }}>
-                                        <h4 style={{ margin: 0 }}>Nikhil</h4>
+                                    <div className="comment-grid">
+                                        <h4 className="comment-user">Nikhil</h4>
                                         {
                                             comment.userId === userId ? (
                                                 <DeleteIcon className="delete-btn" fontSize="small" sx={{ color: red[500], marginLeft: '970px', cursor: 'pointer' }} onClick={() => handleDelete(comment.id)} />
@@ -137,7 +140,7 @@ const InterviewExperienceComments = ({ experinceId }) => {
                                         {comment.comment}
                                     </Typography>
                                     <Typography sx={{ color: "gray" }}>
-                                        posted 1 minute ago
+                                        {"posted " +  moment().startOf('minutes').fromNow()}
                                     </Typography>
                                 </Grid>
                             </Grid>

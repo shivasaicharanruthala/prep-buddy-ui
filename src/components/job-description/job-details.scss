@@ -1,0 +1,35 @@
+
+//Changes for the table
+.JobTable{
+  min-width: 170;
+  font-display: bold;
+}
+
+//Actions ID
+.Actions{
+  min-width: 170,
+
+}
+
+.add-job-listings-btn{
+  flex:auto;
+}
+
+//Search form display has been changed and aligned
+#search-form{
+  display: 'flex';
+  flex-direction: 'row';
+  margin-bottom: 15;
+  margin-left: 200;
+}
+
+//Table rows are given css
+.table-cell{
+  &:hover{
+    color: white !important;
+  }
+}
+
+.css-1m11eqk-MuiTableCell-root.MuiTableCell-body {
+  padding-left: 50px;
+}

@@ -5,7 +5,7 @@ const headers = {
     "Content-Type": "application/json"
 };
 
-const BASE_URL = 'https://prep-buddy-backend.herokuapp.com/'
+const BASE_URL = 'https://prep-buddy-backend.herokuapp.com'
 
 // getAllMyMockInterviews function fetches all interviews to a specific user and sets response component state.
 export const getAllMyMockInterviews = async (userId) => {

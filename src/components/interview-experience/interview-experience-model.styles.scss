@@ -2,13 +2,12 @@
 
 
 
-
-
-
-
-
-
 .interview-experience-form-actions {
-    display: 'flex';
-    flex-direction: 'row-reverse';
+    display: flex;
+    flex-direction: row;
+    margin-left: 360px
+}
+
+.interview-experience-cancel-btn {
+    margin-left: 10px
 }

@@ -1,21 +1,18 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Modal from '@mui/material/Modal';
-import TextField from '@mui/material/TextField';
-import TextareaAutosize from '@mui/material/TextareaAutosize';
-import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
-import Divider from "@mui/material/Divider";
-import ClearOutlinedIcon from '@mui/icons-material/ClearOutlined';
-import ChevronRightOutlinedIcon from '@mui/icons-material/ChevronRightOutlined';
 import moment from 'moment';
-
-import { CustomAlert } from '../Alerts/alert';
-import { UserContext } from "../../Context/user.context";
+import * as React from 'react';
 import { useContext } from "react";
 
+import { UserContext } from "../../Context/user.context";
+
+// imports dependent components to be rendered.
+import { CustomAlert } from '../Alerts/alert';
 import { createInterviewExperience, modifyInterviewExperience } from '../../services/interview-experinces';
+
+// import styled components & Icons from Material UI.
+import ClearOutlinedIcon from '@mui/icons-material/ClearOutlined';
+import { Box, Button, Typography, Modal, TextField, Divider } from '@mui/material';
+import ChevronRightOutlinedIcon from '@mui/icons-material/ChevronRightOutlined';
+
 import './interview-experience-model.styles.scss';
 
 
@@ -176,7 +173,7 @@ export default function InterviewExperienceModal({ isModalOpen, handleModal, exp
                             required
                         /><br />
                         <br />
-                        <div className='interview-experience-form-actions' style={{ display: 'flex', flexDirection: 'row', marginLeft: '360px' }}>
+                        <div className='interview-experience-form-actions' >
                             <div className="interview-experience-save-btn">
                                 <Button
                                     type="submit"
@@ -185,7 +182,7 @@ export default function InterviewExperienceModal({ isModalOpen, handleModal, exp
                                     endIcon={<ChevronRightOutlinedIcon fontSize="small" />}
                                 >{experince ? 'Edit' : 'Save'}</Button>
                             </div>
-                            <div className="interview-experience-cancel-btn" style={{ marginLeft: '10px' }}>
+                            <div className="interview-experience-cancel-btn" >
                                 <Button
                                     color="error"
                                     variant="outlined"

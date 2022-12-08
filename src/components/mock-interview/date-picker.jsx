@@ -3,9 +3,8 @@ import React from 'react';
 import uuid from 'react-uuid';
 import * as moment from 'moment';
 
-import Grid from '@mui/material/Grid';
-import Chip from "@mui/material/Chip";
-import TextField from '@mui/material/TextField';
+// imports styles components from Material UI.
+import {Grid, Chip, TextField} from '@mui/material';
 import ArrowCircleRightRoundedIcon from '@mui/icons-material/ArrowCircleRightRounded';
 
 import './date-picker.styles.scss';

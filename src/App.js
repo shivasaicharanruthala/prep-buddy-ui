@@ -7,14 +7,13 @@ import './App.scss';
 // import all components to be rendered with routes.
 import Protected from "./Protected";
 import NavBar from "./components/navbar/navbar.components";
+import EmployeeForm from './components/job-description/add-job';
 import LoginCard from './components/Login/login.cards.components';
 import MyCalendar from "./components/calender/calender.component";
 import SignUpCard from './components/SignUp/SignUp.cards.components';
+import EnhancedTableHead from './components/job-description/job-details';
 import MockInterview from "./components/mock-interview/mock-interview.components";
 import InterviewExperience from '../src/components/interview-experience/interview-experience';
-import EnhancedTableHead from './components/job-description/job-details';
-import EmployeeForm from './components/job-description/add-job';
-
 
 // App component is injected to index.html with all routes mapped to component to be rendered.
 function App() {
@@ -37,7 +36,6 @@ function App() {
                       <Protected>
                           <MyCalendar/>
                       </Protected>
-
                   </NavBar>
               } />
 
