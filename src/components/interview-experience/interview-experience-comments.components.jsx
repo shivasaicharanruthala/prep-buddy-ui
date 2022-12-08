@@ -128,7 +128,7 @@ const InterviewExperienceComments = ({ experinceId }) => {
                                 </Grid>
                                 <Grid justifyContent="left" item xs zeroMinWidth>
                                     <div className="comment-grid">
-                                        <h4 className="comment-user">Nikhil</h4>
+                                        <h4 className="comment-user">Shiva</h4>
                                         {
                                             comment.userId === userId ? (
                                                 <DeleteIcon className="delete-btn" fontSize="small" sx={{ color: red[500], marginLeft: '970px', cursor: 'pointer' }} onClick={() => handleDelete(comment.id)} />
